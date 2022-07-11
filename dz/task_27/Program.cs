@@ -1,15 +1,12 @@
-﻿// Task 27
-int [] numbers = new int[8];
-Console.Write("[");
+﻿// Task27
+Console.WriteLine("введите число");
+int i = Convert.ToInt32(Console.ReadLine());
+int sum = 0;
 
-for (int i = 0; i < numbers.Length; i++)
- {
-    numbers [i] = new Random().Next(0, 11);
-    Console.Write(" " + Method (i) + " ");
- }
-Console.Write("]");
-
-int Method (int a)
+while (i > 0)
 {
-    return numbers[a];
+int num = i % 10;
+i = i / 10;
+sum = sum + num;
 }
+Console.WriteLine("сумма всех цифр в числе равна: " + sum);
